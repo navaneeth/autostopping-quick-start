@@ -1,0 +1,16 @@
+apiVersion: ccm.harness.io/v1
+kind: AutoStoppingRule
+metadata:
+    name: autostopping-sample
+    namespace: default
+    annotations:
+        harness.io/cloud-connector-id: Lightwing_Non_Prod
+spec:
+    service:
+        name: autostopping-sample
+        port: 80
+    ingress:
+        name: autostopping-sample
+        controllerName: nginx
+    idleTimeMins: 5
+    hideProgressPage: false
