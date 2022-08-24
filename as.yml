@@ -33,24 +33,3 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-
----
-
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: autostopping-sample
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-spec:
-  ingressClassName: nginx
-  rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: autostopping-sample
-            port:
-              number: 80
