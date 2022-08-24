@@ -13,7 +13,7 @@ This will install a demo application named `autostopping-sample` which runs 3 po
 Now create a Ingress to expose the application:
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/navaneeth/autostopping-quick-start/main/sample-app.yml
+kubectl apply -f https://raw.githubusercontent.com/navaneeth/autostopping-quick-start/main/ingress-nginx.yml
 ```
 
 If your cluster is not using Ingress, modify the code to remove Ingress configuration
