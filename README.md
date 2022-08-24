@@ -8,7 +8,15 @@ This repository provides a sample HTTP application and it's associated AutoStopp
 kubectl apply -f https://raw.githubusercontent.com/navaneeth/autostopping-quick-start/main/sample-app.yml
 ```
 
-This will install a demo application named `autostopping-sample` which runs 3 pods running `nginx`. It also creates a k8s Service and Ingress. If your cluster is not using Ingress, modify the code to remove Ingress configuration
+This will install a demo application named `autostopping-sample` which runs 3 pods running `nginx`. 
+
+Now create a Ingress to expose the application:
+
+```
+kubectl apply -f https://raw.githubusercontent.com/navaneeth/autostopping-quick-start/main/sample-app.yml
+```
+
+If your cluster is not using Ingress, modify the code to remove Ingress configuration
 
 # Install the AutoStopping rule
 
